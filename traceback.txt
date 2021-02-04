@@ -1,42 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Compiling ATL code at game/script.rpy:70
-  File "game/script.rpy", line 69, in script
-    scene bg tree:
-Exception: Not a displayable: <curry <function Move at 0x032D0130> ((15, 0), (-15, 0), 0.1) {'delay': 0.275, 'repeat': True, 'bounce': True}>
+While running game code:
+  File "game/script.rpy", line 202, in script
+    think """
+KeyError: u'mana'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 69, in script
-    scene bg tree:
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\ast.py", line 1274, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\ast.py", line 1153, in show_imspec
-    atl=atl)
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\exports.py", line 717, in show
-    sls.add(layer, img, key, zorder, behind, at_list=at_list, name=name, atl=atl, default_transform=default_transform, transient=transient)
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\display\core.py", line 1078, in add
-    thing._show()
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\display\transform.py", line 1048, in _show
-    super(ATLTransform, self)._show()
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\display\transform.py", line 1014, in _show
-    self.update_state()
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\display\transform.py", line 1036, in update_state
-    fr = self.execute(self, self.st, self.at)
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\atl.py", line 521, in execute
-    block = self.compile()
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\atl.py", line 489, in compile
-    block = self.atl.compile(self.context)
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\atl.py", line 684, in compile
-    statements = [ i.compile(ctx) for i in self.statements ]
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\atl.py", line 906, in compile
-    child = renpy.easy.displayable(child)
-  File "D:\renpy-7.3.5-sdk(Galgame)\renpy\easy.py", line 136, in displayable
-    raise Exception("Not a displayable: %r" % (d,))
-Exception: Not a displayable: <curry <function Move at 0x032D0130> ((15, 0), (-15, 0), 0.1) {'delay': 0.275, 'repeat': True, 'bounce': True}>
+  File "game/script.rpy", line 202, in script
+    think """
+  File "renpy/ast.py", line 715, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1384, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1164, in __call__
+    what = what_pattern.replace("[what]", sub(what, translate=True))
+  File "renpy/character.py", line 1153, in sub
+    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
+  File "renpy/substitutions.py", line 270, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 646, in get_field
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 605, in get_value
+KeyError: u'mana'
 
-Windows-8-6.2.9200
-Ren'Py 7.3.5.606
+Windows-10-10.0.18362
+Ren'Py 7.4.2.1292
 Galgame 1.0
-Sun Jul 19 16:37:54 2020
+Thu Feb  4 21:44:27 2021

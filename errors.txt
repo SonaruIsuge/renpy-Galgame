@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 126: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    jump Chapter1_1
-    ^
-
-File "game/script.rpy", line 134: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    jump Chapter1_1
-    ^
+File "game/script.rpy", line 238: expected ':' not found.
+    label chap2
+               ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Wed Feb  3 16:29:20 2021
+Thu Feb  4 21:33:23 2021

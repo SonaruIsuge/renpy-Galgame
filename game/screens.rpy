@@ -133,7 +133,8 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    #background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Composite((1920, 300), (0,0), "gui/textbox.png", (320,0), "gui/textborder.png")
 
 style namebox:
     xpos gui.name_xpos
@@ -1493,3 +1494,27 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 900
+
+################################################################################
+## 自定義介面
+################################################################################
+
+##主角妖力畫面
+screen mana_ui:
+     
+    zorder 100
+    
+    add "ui mana_bar":
+        xalign 0.01
+        yalign 1.0
+        anchor (0.0, 1.0)
+    
+    add "ui mana_1":
+        xalign 0.06
+        yalign 0.925
+        anchor (0.0, 1.0)
+
+    text "[store.mana]":
+        xalign 0.085
+        yalign 0.99
+        anchor (0.5, 0.5)

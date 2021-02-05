@@ -14,3 +14,5 @@ define father = Character('老爸', what_prefix = '「', what_suffix = '」')
 define me = Character('五步松', color="#ffff00", what_prefix = '「', what_suffix = '」')
 
 define think = Character("")
+
+define classmate = Character("女學生", what_prefix = '「', what_suffix = '」')

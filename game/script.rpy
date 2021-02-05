@@ -1,6 +1,6 @@
 ﻿
 #圖片
-image shadow_big: 
+image shadow big: 
     "shadow_1080 normal.png"
     zoom 2.0
     xalign 0.5 yalign 0.0
@@ -9,7 +9,7 @@ image shadow_big:
 #轉場效果
 define flash = Fade(0.5, 0.5, 0.5, color="#fff")
 
-#變數
+#變數    
 define mana = 0
 
 # 遊戲在此開始。
@@ -45,8 +45,10 @@ label start:
     
     stop music fadeout 1.0
 
-label Chapter1:
+label chap1:
     
+    show screen mana_ui
+
     scene bg pond
     with fade
     
@@ -61,9 +63,9 @@ label Chapter1:
     scene bg tree 
     with flash
     
-    show shadow_big
+    show shadow big
 
-    mother "哎呀~{color=#ffff00}五步松{/color}，今天比平常早呢，歡迎回來"
+    who "哎呀~{color=#ffff00}五步松{/color}，今天比平常早呢，歡迎回來"
     
     think "眼前是一位美少女 給人的印象大概是理想的妻子那種類型"
     
@@ -74,7 +76,7 @@ label Chapter1:
     scene bg tree
     with hpunch 
     
-    show shadow_big
+    show shadow big
     
     think "抖了抖身上的水 讓自己不要那麼溼"
     
@@ -145,7 +147,7 @@ label chap1_refuse_inherit:
         
         """
 
-    jump Chapter1_2
+    jump room
 
 label chap1_agree_inherit:
 
@@ -195,12 +197,6 @@ menu:
 
         jump chap1_doubt
 
-label Chapter1_2:
-
-    ""
-
-    return
-
 label chap1_drink:
 
     think """
@@ -221,16 +217,9 @@ label chap1_drink:
     think "突然眼前一片黑，身體感到無比燥熱"
     
     #*妖力提升了
-    $mana = 1;
+    $mana += 1;
 
-    scene bg tree
-    with fade
-
-    think "在房間醒來"
-
-    me "哭阿遲到了"
-
-    jump chap2
+    jump chap2_1
 
 label chap1_doubt:
 
@@ -248,6 +237,43 @@ label chap1_doubt:
 
     mother "親愛的~你在幹嘛呢?"
 
-    jump chap2
+    think "母親一手拿著菜刀，一手端著剛做好的菜走出來"
 
-label chap2:
+    father "春阿~你聽我解釋"
+
+    mother "不是說不要亂餵妖怪吃的東西給松嗎?"
+
+    father "咿"
+
+    mother "你知道我每次要煮好一桌人類和妖怪都能吃的飯菜要花多少心力嗎?"
+
+    father "等等，有話好說，先把菜刀放下"
+
+    mother "要是松吃出什麼毛病要怎麼辦?"
+
+    father "啊啊啊我知道啦~"
+
+    think """
+
+        看著這對恩愛的夫妻，不打算繼續打擾，我便溜回了房
+        
+        不過繼承家業阿，我的能力夠嗎?
+
+        """
+
+menu:
+
+    think "我也不能使出妖術，感覺沒資格阿"
+
+    "深究":
+
+        think "之後去問老爸看看"
+
+        jump room
+
+    "不深究":
+    
+        think "算了，等時候到再說"
+        
+        jump room
+ 

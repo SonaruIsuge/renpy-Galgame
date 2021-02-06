@@ -1,36 +1,44 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00keymap.rpy", line 458, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 458, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 477, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+After initialization, but before game start.
+  File "game/screens.rpy", line 1504, in analyze_screen
+    screen mana_ui:
+  File "game/screens.rpy", line 1504, in analyze
+    screen mana_ui:
+  File "game/screens.rpy", line 1504, in analyze
+    screen mana_ui:
+  File "game/screens.rpy", line 1518, in analyze
+    if $store.mana > 0:
+SyntaxError: invalid syntax (screens.rpy, line 1518)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 458, in script
-    python hide:
-  File "renpy/ast.py", line 922, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "renpy/python.py", line 2218, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 458, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 477, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "renpy/loadsave.py", line 392, in save
-    roots = renpy.game.log.freeze(None)
-  File "renpy/python.py", line 2115, in freeze
-    self.complete(False)
-  File "renpy/python.py", line 1721, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "renpy/bootstrap.py", line 326, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 617, in main
+    run(restart)
+  File "renpy/main.py", line 89, in run
+    renpy.display.screen.analyze_screens()
+  File "renpy/display/screen.py", line 909, in analyze_screens
+    s.ast.analyze_screen()
+  File "game/screens.rpy", line 1504, in analyze_screen
+    screen mana_ui:
+  File "game/screens.rpy", line 1504, in analyze
+    screen mana_ui:
+  File "game/screens.rpy", line 1504, in analyze
+    screen mana_ui:
+  File "game/screens.rpy", line 1518, in analyze
+    if $store.mana > 0:
+  File "renpy/pyanalysis.py", line 542, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "renpy/pyanalysis.py", line 696, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "renpy/python.py", line 835, in py_compile
+    raise e
+SyntaxError: invalid syntax (screens.rpy, line 1518)
 
 Windows-10-10.0.18362
 Ren'Py 7.4.2.1292
 Galgame 1.0
-Fri Feb  5 18:27:22 2021
+Sat Feb  6 15:53:40 2021

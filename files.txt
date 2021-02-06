@@ -1,4 +1,6 @@
 SourceHanSans-Light-Lite.ttf
+achievement.rpy
+achievement.rpyc
 characters.rpy
 characters.rpyc
 gui.rpy
@@ -9,6 +11,10 @@ screens.rpy
 screens.rpyc
 script.rpy
 script.rpyc
+script_chap2.rpy
+script_chap2.rpyc
+script_room.rpy
+script_room.rpyc
 audio\Hero.mp3
 audio\Overcast.mp3
 audio\Star.mp3
@@ -29,6 +35,7 @@ gui\namebox.png
 gui\notify.png
 gui\nvl.png
 gui\skip.png
+gui\textborder.png
 gui\textbox.png
 gui\window_icon.png
 gui\bar\bottom.png
@@ -107,6 +114,8 @@ images\bg starair.jpg
 images\bg starpond.jpg
 images\bg tree.jpg
 images\shadow_1080 normal.png
+images\ui mana_1.png
+images\ui mana_bar.png
 saves\_reload-2-LT1.save
 saves\auto-1-LT1.save
 saves\auto-10-LT1.save

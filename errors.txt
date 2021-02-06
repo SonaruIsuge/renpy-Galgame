@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 137: style property background appears twice.
-    background Composite((1920, 300), (0,0), "gui/textbox.png", (0,0), "gui/textborder.png")
+File "game/screens.rpy", line 245: u'background' is not a keyword argument or valid child for the hbox statement.
+    background Image("#000")
               ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Fri Feb  5 21:29:03 2021
+Sat Feb  6 15:49:25 2021

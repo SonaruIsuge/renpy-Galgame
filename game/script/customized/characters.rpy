@@ -16,3 +16,5 @@ define me = Character('五步松', color="#ffff00", what_prefix = '「', what_su
 define think = Character("")
 
 define classmate = Character("女學生", what_prefix = '「', what_suffix = '」')
+
+define miko = Character("許靜雨", what_prefix = '「', what_suffix = '」')

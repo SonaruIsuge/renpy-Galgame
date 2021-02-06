@@ -134,7 +134,7 @@ style window:
     ysize gui.textbox_height
 
     #background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
-    background Composite((1920, 300), (0,0), "gui/textbox.png", (320,0), "gui/textborder.png")
+    background Composite((1920, 300), (0,0), "gui/textbox green.png", (320,10), "gui/textborder.png")
 
 style namebox:
     xpos gui.name_xpos
@@ -243,18 +243,19 @@ screen quick_menu():
 
         hbox:
             style_prefix "quick"
-
-            xalign 0.5
-            yalign 1.0
-
-            textbutton _("回退") action Rollback()
-            textbutton _("歷史") action ShowMenu('history')
-            textbutton _("快進") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自動") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
-            textbutton _("快存") action QuickSave()
-            textbutton _("快讀") action QuickLoad()
-            textbutton _("設置") action ShowMenu('preferences')
+            anchor (0.5,0.5)
+            xalign 0.93
+            yalign 0.95
+            vbox:
+                textbutton _("回退") action Rollback()
+                textbutton _("歷史") action ShowMenu('history')
+                textbutton _("快進") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("自動") action Preference("auto-forward", "toggle")
+            vbox:
+                textbutton _("保存") action ShowMenu('save')
+                textbutton _("快存") action QuickSave()
+                textbutton _("快讀") action QuickLoad()
+                textbutton _("設置") action ShowMenu('preferences')
 
 
 ## 此代码确保只要玩家没有明确隐藏界面，就会在游戏中显示“quick_menu”屏幕。
@@ -1509,7 +1510,7 @@ screen mana_ui:
         yalign 1.0
         anchor (0.0, 1.0)
     
-    add "ui mana_1":
+    add "fire_ani":
         xalign 0.06
         yalign 0.925
         anchor (0.0, 1.0)

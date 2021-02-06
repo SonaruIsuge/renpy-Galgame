@@ -1,7 +1,7 @@
 
 label room:
 
-    scene bg tree
+    scene bg room
     with fade
 
 menu:
@@ -56,16 +56,13 @@ menu:
 
     "使用遊戲道具回復體力，繼續":
 
-        think """
-        ....
-
-        ...
-
-        ..
-
-        .
+        think "...."
         
-        """
+        think "..."
+
+        think ".."
+
+        think "." 
         
         jump chap2_1
 
@@ -241,7 +238,73 @@ label room_love:
 
 label room_money:
 
-    return
+    me "是我啦!我出車禍了，匯200萬給我"
+
+    classmate "ㄟ？！真的嗎？我現在馬上匯！可以跟我說你的帳戶嗎？"
+
+    me "ㄟ？！"
+
+    think "我就如實跟她說吧"
+
+    me "89346734"
+
+    classmate "好了"
+
+    me "這種玩笑誰會......"
+
+    think "一瞬間，我看到了手機的通知，看來我的帳戶裡有人匯了200萬給我"
+
+    #獲得200萬(插入音效)
+    $achievement.grant("獲得200萬")
+
+    me """
+    
+        耶！獲得兩桶金了！
+    
+        這兩桶就分別取名叫傑夫和約翰吧
+
+        ...
+
+        唉唉唉！！？？
+    
+    """
+
+    classmate "你還好吧？"
+
+    me "妳才還好吧？！"
+    
+    me "妳腦袋沒問題嗎？？！"
+
+    classmate "真是失禮ㄟ！人家都資助你了！"
+
+    me """
+    
+        ...
+
+        總之我沒事，我只是鬧著玩的
+
+        還有會這樣說的多半是詐騙啊！
+        
+    """
+
+    classmate "那如果是真的怎麼辦？"
+
+    me "嗚呃..."
+
+    think "總覺得我的心像是被什麼東西狠狠的打穿了"
+
+    me "我錢會還妳，還請妳不要這麼相信陌生人"
+
+    #喪失200萬(插入音效)
+    $achievement.grant("喪失200萬")
+
+    me "..."
+
+    me "再見了傑夫...再見了約翰..."
+
+    classmate "真搞不懂你到底在跟誰說話"
+
+    jump room_end
 
 label room_endcall:
 
@@ -267,7 +330,3 @@ label room_end:
     think "..."
 
     jump chap2_2
-
-
-
-

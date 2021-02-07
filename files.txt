@@ -1,33 +1,22 @@
 SourceHanSans-Light-Lite.ttf
-achievement.rpy
-achievement.rpyc
-characters.rpy
-characters.rpyc
-gui.rpy
-gui.rpyc
-options.rpy
-options.rpyc
-screens.rpy
-screens.rpyc
-script.rpy
-script.rpyc
-script_chap2.rpy
-script_chap2.rpyc
-script_room.rpy
-script_room.rpyc
+微軟正黑體-1.ttf
 audio\Hero.mp3
 audio\Overcast.mp3
 audio\Star.mp3
 audio\bgm1.mp3
 audio\bgm2.mp3
+audio\bgm_hell.mp3
 audio\character_op1.mp3
 audio\cheer.mp3
 audio\dream.mp3
+audio\hell.mp3
 audio\soul.mp3
+audio\weird.mp3
 audio\角色歌_附桑神.mp3
 cache\bytecode.rpyb
 cache\pyanalysis.rpyb
 cache\screens.rpyb
+effect\blink.png
 gui\frame.png
 gui\game_menu.png
 gui\main_menu.png
@@ -36,6 +25,7 @@ gui\notify.png
 gui\nvl.png
 gui\skip.png
 gui\textborder.png
+gui\textbox green.png
 gui\textbox.png
 gui\window_icon.png
 gui\bar\bottom.png
@@ -108,14 +98,18 @@ gui\slider\vertical_hover_thumb.png
 gui\slider\vertical_idle_bar.png
 gui\slider\vertical_idle_thumb.png
 images\Natextbox.png
-images\bg black.jpg
-images\bg pond.jpg
-images\bg starair.jpg
-images\bg starpond.jpg
-images\bg tree.jpg
 images\shadow_1080 normal.png
 images\ui mana_1.png
+images\ui mana_2.png
+images\ui mana_3.png
+images\ui mana_4.png
+images\ui mana_5.png
 images\ui mana_bar.png
+images\bg\bg black.jpg
+images\bg\bg pond.jpg
+images\bg\bg room.jpg
+images\bg\bg starpond.jpg
+images\bg\bg tree.jpg
 saves\_reload-2-LT1.save
 saves\auto-1-LT1.save
 saves\auto-10-LT1.save
@@ -132,5 +126,29 @@ saves\persistent
 saves\quick-1-LT1.save
 saves\quick-2-LT1.save
 saves\quick-3-LT1.save
+script\customized\achievement.rpy
+script\customized\achievement.rpyc
+script\customized\characters.rpy
+script\customized\characters.rpyc
+script\customized\custom_func.rpy
+script\customized\custom_func.rpyc
+script\customized\define_objects.rpy
+script\customized\define_objects.rpyc
+script\flowchart\loadingscreen.rpy
+script\flowchart\loadingscreen.rpyc
+script\flowchart\mapmenu.rpy
+script\flowchart\mapmenu.rpyc
+script\flowchart\script.rpy
+script\flowchart\script.rpyc
+script\flowchart\script_chap2.rpy
+script\flowchart\script_chap2.rpyc
+script\flowchart\script_room.rpy
+script\flowchart\script_room.rpyc
+script\gamesetting\gui.rpy
+script\gamesetting\gui.rpyc
+script\gamesetting\options.rpy
+script\gamesetting\options.rpyc
+script\gamesetting\screens.rpy
+script\gamesetting\screens.rpyc
 tl\None\common.rpym
 tl\None\common.rpymc

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 245: u'background' is not a keyword argument or valid child for the hbox statement.
-    background Image("#000")
-              ^
+File "game/script/flowchart/script_room.rpy", line 63: expected 'image_name_component' not found.
+    show scene black20
+        ^
 
 Ren'Py Version: Ren'Py 7.4.2.1292
-Sat Feb  6 15:49:25 2021
+Sun Feb  7 12:58:47 2021
